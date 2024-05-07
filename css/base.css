@@ -1,0 +1,56 @@
+/* Base styles */
+html {
+    background-color: black;
+    color: white;
+}
+
+/* Add custom styles here */
+                /* Add custom styles here */
+                nav {
+                    background-color: #CCCCCC;
+                    /* Gray background */
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 15px;
+                    /* Rounded corners */
+                }
+        
+                nav ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    /* Display the list items as flex items */
+                    justify-content: flex-start;
+                    /* Align items to the left */
+                }
+        
+                nav ul li {
+                    display: inline;
+                }
+        
+                nav ul li a {
+                    text-decoration: none;
+                    color: black;
+                    padding: 10px;
+                }
+        
+                nav ul li a:hover {
+                    background-color: #DDD;
+                    /* Hover background color */
+                    border-radius: 5px;
+                    /* Rounded corners on hover */
+                }
+        
+                .cart-icon {
+                    font-size: 24px;
+                    color: black;
+                }
+
+.cart-icon {
+    font-size: 24px;
+    color: black;
+}
+
