@@ -53,49 +53,78 @@ html {
     font-size: 24px;
     color: black;
 }
+
 /*End Nav Styles*/
 
-/* Contact Form Styles */
-.contact-form {
-    background-color: #CCCCCC;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 20px;
+.form-inline {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    background-color: #f0f0f0; /* Grey background */
+    padding: 20px; /* Padding around the form */
+    border-radius: 5px; /* Rounded corners */
+    color: black; /* Black text */
 }
 
-.contact-form h2 {
-    margin-bottom: 10px;
-    width: 100%;
+.form-input {
+    padding: 10px; /* Padding inside the input boxes */
+    border: 1px solid #ccc; /* Border around the input boxes */
+    border-radius: 5px; /* Rounded corners */
+    color: black; /* Black text */
 }
 
-.contact-form label {
-    font-weight: bold;
-    flex: 0 0 100%;
+.form-submit {
+    margin-left: 10px;
+    padding: 10px 20px; /* Padding inside the submit button */
+    background-color: #4CAF50; /* Green background */
+    color: black; /* Black text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes when hovering over the button */
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="submit"] {
-    flex: 1;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #999;
-    border-radius: 5px;
+.form-submit:hover {
+    background-color: #45a049; /* Darker green when hovering */
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"] {
-    margin-bottom: 10px;
+.container {
+    display: flex;
+    justify-content: space-between;
 }
 
-.contact-form input[type="submit"] {
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 0; /* Remove margin-right for the submit button */
+.top-section {
+    display: flex;
+    flex-direction: row; /* This will arrange the children in a row */
+    justify-content: space-between; /* This will add space between the elements */
 }
 
+
+.contact-form {
+    flex: 3; /* This will make the contact form take up 3/4 of the container's width */
+}
+
+.sidebar {
+    flex: 1; /* This will make the sidebar take up 1/4 of the container's width */
+    margin-top: 20px; /* This will add some space above the sidebar */
+    margin-left: 20px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.image-container {
+    margin-top: 20px; /* This will add some space above the image */
+}
+
+.news-item {
+    background-color: #008000; /* This will make the background green */
+    color: black; /* This will make the text black */
+}
+
+.news-title {
+    font-weight: bold; /* This will make the title bold */
+}
+
+.news-date, .news-author {
+    font-size: 0.8em; /* This will make the date and author name smaller */
+    color: #000000; /* This will make the date and author name a lighter color */
+}
