@@ -4,127 +4,134 @@ html {
     color: white;
 }
 
-/* Start Nav Styles*/
-                /* Add custom styles here */
-                nav {
-                    background-color: #CCCCCC;
-                    /* Gray background */
-                    padding: 10px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    border-radius: 15px;
-                    /* Rounded corners */
-                }
-        
-                nav ul {
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0;
-                    display: flex;
-                    /* Display the list items as flex items */
-                    justify-content: flex-start;
-                    /* Align items to the left */
-                }
-        
-                nav ul li {
-                    display: inline;
-                }
-        
-                nav ul li a {
-                    text-decoration: none;
-                    color: black;
-                    padding: 10px;
-                }
-        
-                nav ul li a:hover {
-                    background-color: #DDD;
-                    /* Hover background color */
-                    border-radius: 5px;
-                    /* Rounded corners on hover */
-                }
-        
-                .cart-icon {
-                    font-size: 24px;
-                    color: black;
-                }
+/* Start Nav Styles */
+nav {
+    background-color: #CCCCCC;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #DDD;
+    border-radius: 5px;
+}
 
 .cart-icon {
     font-size: 24px;
     color: black;
 }
 
-/*End Nav Styles*/
+/* End Nav Styles */
 
 .form-inline {
     display: flex;
     align-items: center;
-    background-color: #f0f0f0; /* Grey background */
-    padding: 20px; /* Padding around the form */
-    border-radius: 5px; /* Rounded corners */
-    color: black; /* Black text */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
 }
 
 .form-input {
-    padding: 10px; /* Padding inside the input boxes */
-    border: 1px solid #ccc; /* Border around the input boxes */
-    border-radius: 5px; /* Rounded corners */
-    color: black; /* Black text */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
 }
 
 .form-submit {
     margin-left: 10px;
-    padding: 10px 20px; /* Padding inside the submit button */
-    background-color: #4CAF50; /* Green background */
-    color: black; /* Black text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Cursor changes when hovering over the button */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .form-submit:hover {
-    background-color: #45a049; /* Darker green when hovering */
+    background-color: #45a049;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns */
+    grid-gap: 20px;
+    /* Gap between columns */
 }
-
-.top-section {
-    display: flex;
-    flex-direction: row; /* This will arrange the children in a row */
-    justify-content: space-between; /* This will add space between the elements */
-}
-
 
 .contact-form {
-    flex: 3; /* This will make the contact form take up 3/4 of the container's width */
+    grid-column: 1 / span 1;
+    /* Span 1 column */
 }
 
 .sidebar {
-    flex: 1; /* This will make the sidebar take up 1/4 of the container's width */
-    margin-top: 20px; /* This will add some space above the sidebar */
-    margin-left: 20px;
+    grid-column: 2 / span 1;
+    /* Span 1 column */
+    grid-row: 1 / span 2;
+    /* Span 2 rows */
+    margin-top: 20px;
     padding: 5px;
     background-color: #f0f0f0;
     color: black;
 }
 
 .image-container {
-    margin-top: 20px; /* This will add some space above the image */
+    grid-column: 1 / span 1;
+    /* Span 1 column */
+    grid-row: 2 / span 1;
+    /* Span 1 row */
+    margin-top: 20px;
+    /* Adjust margin as needed */
+    border-radius: 10px;
+        /* Add rounded corners */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
 }
 
 .news-item {
-    background-color: #008000; /* This will make the background green */
-    color: black; /* This will make the text black */
+    background-color: #008000;
+    color: black;
+    padding: 10px;
+    /* Added padding to news items */
+    margin-bottom: 10px;
+    /* Added space between news items */
 }
 
 .news-title {
-    font-weight: bold; /* This will make the title bold */
+    font-weight: bold;
 }
 
-.news-date, .news-author {
-    font-size: 0.8em; /* This will make the date and author name smaller */
-    color: #000000; /* This will make the date and author name a lighter color */
+.news-date,
+.news-author {
+    font-size: 0.8em;
+    color: #000000;
 }
