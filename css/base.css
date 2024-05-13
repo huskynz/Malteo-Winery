@@ -135,3 +135,36 @@ nav ul li a:hover {
     font-size: 0.8em;
     color: #000000;
 }
+
+
+  .image-text-container {
+      display: flex;
+      align-items: center;
+  }
+
+  .text {
+      flex: 1;
+      padding: 20px;
+      text-align: right;
+  }
+
+  .image-container {
+      flex: 1;
+  }
+
+  .image-container img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  @media (max-width: 768px) {
+      .image-text-container {
+          flex-direction: column;
+      }
+
+      .text,
+      .image-container {
+          width: 100%;
+          text-align: left;
+      }
+  }
