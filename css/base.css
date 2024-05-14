@@ -5,12 +5,12 @@ html {
 }
 
 /* Start Nav Styles */
+
 nav {
     background-color: #CCCCCC;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Align items vertically */
     border-radius: 15px;
 }
 
@@ -19,11 +19,11 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Align items to the left */
 }
 
 nav ul li {
-    display: inline;
+    margin-right: 20px; /* Add some space between the items */
 }
 
 nav ul li a {
@@ -40,8 +40,8 @@ nav ul li a:hover {
 .cart-icon {
     font-size: 24px;
     color: black;
+    margin-left: auto; /* This will push the shopping cart to the right */
 }
-
 /* End Nav Styles */
 
 .form-inline {
@@ -167,4 +167,11 @@ nav ul li a:hover {
           width: 100%;
           text-align: left;
       }
+  }
+
+
+  .top-img {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end;
   }

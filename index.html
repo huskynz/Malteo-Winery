@@ -1,29 +1,45 @@
+<!-- Document type declaration for XHTML 1.1 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 
 <head class="">
+    <!-- Meta tags for character set and responsive design -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to the CSS stylesheets -->
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/wh.css" />
+    
+    <!-- Page title -->
     <title>Malteo Winery</title>
+    
+    <!-- Link to the Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <nav>
+        <!-- Company logo -->
         <img src="https://serv.malteowinery.xyz/logo/defualt.png" alt="Company Logo" class="w-50 h-50">
+        
+        <!-- Navigation links -->
         <ul>
             <li><a href="./">Home</a></li>
             <li><a href="./pages/underconstruction.html">Gallery</a></li>
             <li><a href="./pages/store.html">Shop</a></li>
         </ul>
+        
+        <!-- Shopping cart icon -->
         <a href="./pages/underconstruction.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
     </nav>
 
+    <!-- Main content container -->
     <div class="container">
+        <!-- Contact form -->
         <div class="contact-form">
-            <h2>Contact Us</h2>
+            <h2>Sign up for our news letter</h2>
             <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="form-inline">
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" id="name" name="name" required class="form-input">
@@ -32,65 +48,82 @@
                 <input type="submit" value="Submit" class="form-submit">
             </form>
         </div>
-       <aside class="sidebar">
-    <h2>Latest News</h2>
-    <div class="news-item">
-        <h3 class="news-title">News Title</h3>
-        <p class="news-date">Date</p>
-        <p class="news-author">Author Name</p>
-        <p class="news-description">This is a short description of the news item. You can add more details here.</p>
-    </div>
-    <div class="news-item">
-        <h3 class="news-title">News Title</h3>
-        <p class="news-date">Date</p>
-        <p class="news-author">Author Name</p>
-        <p class="news-description">This is a short description of the news item. You can add more details here.</p>
-    </div>
-    <div class="news-item">
-        <h3 class="news-title">News Title</h3>
-        <p class="news-date">Date</p>
-        <p class="news-author">Author Name</p>
-        <p class="news-description">This is a short description of the news item. You can add more details here.</p>
-    </div>
-    <div class="news-item">
-        <h3 class="news-title">News Title</h3>
-        <p class="news-date">Date</p>
-        <p class="news-author">Author Name</p>
-        <p class="news-description">This is a short description of the news item. You can add more details here.</p>
-    </div>
-    <div class="news-item">
-        <h3 class="news-title">News Title</h3>
-        <p class="news-date">Date</p>
-        <p class="news-author">Author Name</p>
-        <p class="news-description">This is a short description of the news item. You can add more details here.</p>
-    </div>
-    <div class="news-item">
-        <h3 class="news-title">News Title</h3>
-        <p class="news-date">Date</p>
-        <p class="news-author">Author Name</p>
-        <p class="news-description">This is a short description of the news item. You can add more details here.</p>
-    </div>
-</aside>
-    <div class="image-container">
-        <img src="https://serv.husky.nz/logo/default.png" alt="Image Description">
-    </div>
-    </div>
-        <div class="image-text-container">
-            <div class="text">
-                <h2>Image Description</h2>
-                <p>This is some text describing the image. You can provide any relevant information or details here.</p>
-            </div>
-            <div class="image-container">
-                <img src="https://serv.husky.nz/logo/default.png" alt="Image Description">
-            </div>
+        <!-- Image next to the local events and news aside -->
+        <div class="image-container">
+            <img src="https://www.neverendingvoyage.com/wp-content/uploads/2020/01/main-marlborough-wineries-nz-12.jpg" alt="Image Description" class="w-1000 h-1000">
         </div>
+        
+        <!-- Sidebar for news items -->
+        <aside class="sidebar">
+            <h2>Local Events and Latest News</h2>
+            
+            <!-- News items -->
+            <div class="news-item">
+                <h3 class="news-title">News Title</h3>
+                <p class="news-date">Date</p>
+                <p class="news-author">Author Name</p>
+                <p class="news-description">This is a short description of the news item. You can add more details here.</p>
+            </div>
+            
+            
+            <div class="news-item">
+                <h3 class="news-title">News Title</h3>
+                <p class="news-date">Date</p>
+                <p class="news-author">Author Name</p>
+                <p class="news-description">This is a short description of the news item. You can add more details here.</p>
+            </div>
+
+            <div class="news-item">
+                <h3 class="news-title">News Title</h3>
+                <p class="news-date">Date</p>
+                <p class="news-author">Author Name</p>
+                <p class="news-description">This is a short description of the news item. You can add more details here.</p>
+            </div>
+
+            <div class="news-item">
+                <h3 class="news-title">News Title</h3>
+                <p class="news-date">Date</p>
+                <p class="news-author">Author Name</p>
+                <p class="news-description">This is a short description of the news item. You can add more details here.</p>
+            </div>
+
+            <div class="news-item">
+                <h3 class="news-title">News Title</h3>
+                <p class="news-date">Date</p>
+                <p class="news-author">Author Name</p>
+                <p class="news-description">This is a short description of the news item. You can add more details here.</p>
+            </div>
+            
+        </aside>
+    </div>
+
+    <!-- Image and text container -->
+    <div class="image-text-container">
+        <!-- Text content -->
+        <div class="text">
+            <h2>Image Description</h2>
+            <p>This is some text describing the image. You can provide any relevant information or details here.</p>
         </div>
+        <!-- Image content -->
+        <div class="image-container">
+            <img src="https://serv.husky.nz/logo/default.png" alt="Image Description">
+        </div>
+    </div>
 
- 
-    
-   
+    <!-- Another image and text container -->
+    <div class="image-text-container">
+        <!-- Image content -->
+        <div class="image-container">
+            <img src="https://serv.husky.nz/logo/default.png" alt="Image Description">
+        </div>
+        <!-- Text content -->
+        <div class="text">
+            <h2>Image Description</h2>
+            <p>This is some text describing the image. You can provide any relevant information or details here.</p>
+        </div>
+    </div>
 
-
+    <!-- Footer -->
     <footer class="bg-teal">
         <!-- Footer content -->
     </footer>

@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/huskynz/Malteo-Winery">
-    <img src="https://serv.malteowinery.xyz/logo/defualt.png" alt="Logo" width="80" height="80">
+    <img src="https://serv.malteowinery.xyz/logo/default.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Malteo Winery</h3>
