@@ -16,24 +16,16 @@
     
     <!-- Link to the Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script>
+        document.getElementById('navbar').innerHTML =
+            '<object type="text/html" data="./components/nav.html"></object>';
+        </script>
+
+    <div id="navbar"></div>
 </head>
 
 <body>
-    <!-- Navigation bar -->
-    <nav>
-        <!-- Company logo -->
-        <img src="https://serv.malteowinery.xyz/logo/defualt.png" alt="Company Logo" class="w-50 h-50">
-        
-        <!-- Navigation links -->
-        <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="./pages/underconstruction.html">Gallery</a></li>
-            <li><a href="./pages/store.html">Shop</a></li>
-        </ul>
-        
-        <!-- Shopping cart icon -->
-        <a href="./pages/underconstruction.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-    </nav>
 
     <!-- Main content container -->
     <div class="container">
