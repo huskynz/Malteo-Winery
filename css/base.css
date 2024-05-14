@@ -181,3 +181,21 @@ nav ul li a:hover {
     justify-content: center; 
     align-items: flex-end;
   }
+
+
+  .w-50 {
+    width: 50px;
+}
+
+.h-50 {
+    height: 50px;
+}
+
+
+.w-1000 {
+    width: 1000px;
+}
+
+.h-1000 {
+    height: 1000px;
+}
