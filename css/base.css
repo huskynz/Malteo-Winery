@@ -4,35 +4,39 @@ html {
     color: white;
 }
 
-/* Start Nav Styles */
+body {}
 
+/* Start Nav Styles */
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     background-color: #CCCCCC;
     padding: 10px;
     display: flex;
-    align-items: center; /* Align items vertically */
+    align-items: center;
     border-radius: 15px;
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start;
 }
 
-nav ul li{
-    margin-right: 20px; /* Add some space between the items */
+nav ul li {
+    margin-right: 20px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: black;
     padding: 10px;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     background-color: #DDD;
     border-radius: 5px;
 }
@@ -40,10 +44,30 @@ nav ul li a:hover{
 .cart-icon {
     font-size: 24px;
     color: black;
-    margin-left: auto; /* This will push the shopping cart to the right */
+    margin-left: auto;
+    position: relative;
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 200px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.cart-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 /* End Nav Styles */
 
+/* Form Styles */
 .form-inline {
     display: flex;
     align-items: center;
@@ -73,18 +97,17 @@ nav ul li a:hover{
 .form-submit:hover {
     background-color: #45a049;
 }
+/* End Form Styles */
 
+/* Container Styles */
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two columns */
     grid-gap: 20px;
-    /* Gap between columns */
 }
 
 .contact-form {
     grid-column: 1 / span 1;
-    /* Span 1 column */
 }
 
 .sidebar {
@@ -101,13 +124,9 @@ nav ul li a:hover{
 
 .image-container {
     grid-column: 1 / span 1;
-    /* Span 1 column */
     grid-row: 2 / span 1;
-    /* Span 1 row */
     margin-top: 20px;
-    /* Adjust margin as needed */
     border-radius: 10px;
-        /* Add rounded corners */
 }
 
 .image-container img {
@@ -120,16 +139,11 @@ nav ul li a:hover{
 
 .news-item {
     background-color: black;
-    /* Adjust the font size to make the text smaller */
     font-size: 0.9em;
-
-    /* Adjust the padding and margin to reduce the space around the news items */
     padding: 10px;
     margin: 10px 0;
-
-    /* Adjust the width to make the news items narrower */
     width: 80%;
-    max-width: 80%; /* Adjust as needed */
+    max-width: 80%;
     color: white;
 }
 
@@ -143,58 +157,54 @@ nav ul li a:hover{
     color: white;
 }
 
+.image-text-container {
+    display: flex;
+    align-items: center;
+}
 
-  .image-text-container {
-      display: flex;
-      align-items: center;
-  }
+.text {
+    flex: 1;
+    padding: 60px;
+    text-align: right;
+    color: black;
+    background-color: #CCCCCC;
+}
 
-  .text {
-      flex: 1;
-      padding: 60px;
-      text-align: right;
-      color: black;
-      background-color: #CCCCCC;
-  }
+.image-container {
+    flex: 1;
+    margin-bottom: 15px;
+}
 
-  .image-container {
-      flex: 1;
-      margin-bottom: 15px;
-  }
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
 
-  .image-container img {
-      max-width: 100%;
-      height: auto;
-  }
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+    }
 
-  @media (max-width: 768px) {
-      .image-text-container {
-          flex-direction: column;
-      }
+    .text,
+    .image-container {
+        width: 100%;
+        text-align: left;
+    }
+}
 
-      .text,
-      .image-container {
-          width: 100%;
-          text-align: left;
-      }
-  }
-
-
-  .top-img {
+.top-img {
     display: flex; 
     justify-content: center; 
     align-items: flex-end;
-  }
+}
 
-
-  .w-50 {
+.w-50 {
     width: 50px;
 }
 
 .h-50 {
     height: 50px;
 }
-
 
 .w-1000 {
     width: 1000px;
@@ -203,16 +213,25 @@ nav ul li a:hover{
 .h-1000 {
     height: 1000px;
 }
+/* End Container Styles */
 
 /* Start Footer Styles */
-
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #CCCCCC;
-    padding: 10px;
+    padding: 3px;
     display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    justify-content: space-between;
     border-radius: 15px;
+    flex-shrink: 0;
+}
+
+footer img, nav img {
+    border-radius: 10px;
 }
 
 footer ul {
@@ -223,7 +242,7 @@ footer ul {
 }
 
 footer ul li {
-    margin-left: 20px; /* Add some space between the items */
+    margin-left: 20px;
 }
 
 footer ul li a {
@@ -238,12 +257,54 @@ footer ul li a:hover {
 }
 
 .footer-text {
-    position: absolute;
+    position: fixed;
+    bottom: 0;
     width: 100%;
     text-align: center;
     color: black;
     font-weight: bold;
     font-size: 50px;
 }
-
 /* End Footer Styles */
+
+/* Main Container Styles */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-content {
+    flex-grow: 1;
+}
+
+#cart-box {
+    width: 150px;
+    height: 50vh;
+    background-color: #DDD;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#cart-items div {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+/* End Main Container Styles */
