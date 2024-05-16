@@ -12,9 +12,7 @@
 ![Contributors](https://img.shields.io/github/contributors/HuskyNZ/Malteo-Winery?color=dark-green) ![Issues](https://img.shields.io/github/issues/HuskyNZ/Malteo-Winery) ![License](https://img.shields.io/github/license/HuskyNZ/Malteo-Winery)
 
 ## About The Project
-
-This site is built in NextJS and is a site to learn who I am, Sometimes I break things sometimes I dont it depends on the day.
-
+This is a project im working on for a assment im usieng a few HTML componts that get loaded via JS
 ## Built With
 - [Html](#)
 - [css](#)
