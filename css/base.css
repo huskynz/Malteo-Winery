@@ -38,7 +38,6 @@ nav {
     align-self: flex-end;
 }
 
-/* Start Nav Styles */
 nav {
     position: sticky;
     top: 0;
@@ -55,7 +54,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start;
+    flex-grow: 1; /* This will make the ul take up all available space */
 }
 
 nav ul li {
@@ -73,15 +72,38 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+.cart-icon {
+    margin-left: auto; /* This will push the cart icon to the right */
+    position: relative;
+    color: black; /* Set the color to match your site */
+    text-decoration: none; /* Remove underline from links */
+}
+
+#cart-items {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 200px;
+    background-color: #DDD; /* Set the background color to match your site */
+    border: 1px solid #000; /* Set the border to match your site */
+    padding: 10px;
+    color: black; /* Set the color to match your site */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.cart-icon:hover #cart-items {
+    display: block;
+}
 
 .cart-link {
-    color: black;
+    color: black; /* Set the color to match your site */
+    text-decoration: none; /* Remove underline from links */
 }
 
 .cart-link:visited {
-    color: black;
+    color: black; /* Set the color to match your site */
+    text-decoration: none; /* Remove underline from links */
 }
-/* End Nav Styles */
 
 /* Form Styles */
 .form-inline {
@@ -339,11 +361,11 @@ nav {
     margin-right: 10px; /* Add some space between the image and the text */
 }
 
- .product-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    padding: 20px;
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 5px;
 }
 
 .product-item {
@@ -421,4 +443,19 @@ nav {
 }
 #footer {
     margin-top: auto;
+}
+
+.total-items {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
 }
