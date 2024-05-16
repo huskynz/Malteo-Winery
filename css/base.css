@@ -73,12 +73,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.cart-icon {
-    font-size: 24px;
-    color: black;
-    margin-left: auto;
-    position: relative;
-}
+
 .cart-link {
     color: black;
 }
@@ -315,6 +310,28 @@ footer ul li a:hover {
     display: flex; /* Make the cart items display in a row */
     justify-content: space-between; /* Space the items evenly */
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+#cart-items {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.cart-icon:hover #cart-items {
+    display: block;
+}
 
 #cart-items div img {
     width: 50px; /* Make the product images smaller */
@@ -371,6 +388,35 @@ footer ul li a:hover {
     }
     .contact-form {
         grid-column: 1;
+    }
+}
+/* For large screens */
+@media (min-width: 1025px) {
+    .nav-menu {
+        flex-direction: row;
+    }
+}
+
+/* For small screens */
+@media (max-width: 1024px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+}
+/* For small screens */
+@media (max-width: 600px) {
+    #cart-items {
+        width: 100%; /* Make the cart take up the full width of the screen */
+        position: fixed; /* Make the cart always visible */
+        bottom: 0; /* Position the cart at the bottom of the screen */
+    }
+
+    .cart-item {
+        font-size: 0.8em; /* Make the text smaller */
+    }
+
+    .remove-button {
+        width: 100%; /* Make the remove button take up the full width of the cart item */
     }
 }
 #footer {

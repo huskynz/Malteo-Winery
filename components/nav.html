@@ -1,4 +1,3 @@
-<script src="/js/cart.js"></script>
 <nav>
     <!-- Company logo -->
     <img src="https://serv.malteowinery.xyz/logo/defualt.png" alt="Company Logo" class="w-50 h-50">
@@ -8,13 +7,13 @@
         <li><a href="/">Home</a></li>
         <li><a href="/pages/underconstruction.html?page=gallery">Gallery</a></li>
         <li><a href="/pages/store.html">Shop</a></li>
+        <!-- Shopping cart icon and dropdown -->
+        <li class="cart-icon">
+            <a href="/pages/store.html" class="cart-link cart-link:visited">
+                <i class="fas fa-shopping-cart"></i>
+                <!-- Cart items will be inserted here -->
+                <div id="cart-items"></div>
+            </a>
+        </li>
     </ul>
-
-    <!-- Shopping cart icon and dropdown -->
-    <div class="cart-icon">
-        <a href="/pages/store.html" class="cart-link cart-link:visited">
-        <i class="fas fa-shopping-cart"></i>
-        </a>
-        </div>
-    </div>
 </nav>
