@@ -1,33 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 
-<head class="">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/wh.css" />
-    <title>Malteo Winery</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<head id="header">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/componets.js"> </script>
 </head>
 
 <body>
-    <nav>
-        <img src="https://serv.malteowinery.xyz/logo/defualt.png" alt="Company Logo" class="w-50 h-50">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/underconstruction.html">Gallery</a></li>
-            <li><a href="../pages/store.html">Shop</a></li>
-        </ul>
-        <a href="../pages/underconstruction.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-    </nav>
-
-    <div>
-        <h1>There is a website coming soon</h1>
+    <div id="navbar"></div>
+    <main class="main-container">
+        
+        <section class="product-grid">
+           <div class="product-item">
+    <img src="image-source.jpg" alt="Product Image" class="product-image">
+    <h2 class="product-name">Product Name</h2>
+    <p class="product-price">$100</p>
+    <button>Add to cart</button>
+</div>
+            <div class="product-item">
+    <img src="image-source.jpg" alt="Product Image" class="product-image">
+    <h2 class="product-name">Product Name</h2>
+    <p class="product-price">$100</p>
+    <button>Add to cart</button>
+</div>
+            <!-- Add more products as needed -->
+        </section>
+        <div id="main-content"></div>
+        <div id="cart-box">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+        </div>
     </div>
-
-    <footer class="bg-teal">
-        <!-- Footer content -->
-    </footer>
+    </main>
+    <div id="footer"></div>
 </body>
 
 </html>

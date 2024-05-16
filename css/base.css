@@ -1,16 +1,34 @@
-/* Base styles */
-html {
-    background-color: black;
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: black;
     color: white;
 }
 
-/* Start Nav Styles */
-
 nav {
+    flex-shrink: 0; /* This will prevent the nav from shrinking */
+}
+
+.main-container {
+    flex: 1 0 auto; /* This will make the main container stretch to fill the available space */
+}
+
+.product-item .product-image {
+    width: 100%; /* This will make the image take the full width of its container */
+    height: auto; /* This will maintain the aspect ratio of the image */
+}
+
+/* Start Nav Styles */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     background-color: #CCCCCC;
     padding: 10px;
     display: flex;
-    align-items: center; /* Align items vertically */
+    align-items: center;
     border-radius: 15px;
 }
 
@@ -19,11 +37,11 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start;
 }
 
 nav ul li {
-    margin-right: 20px; /* Add some space between the items */
+    margin-right: 20px;
 }
 
 nav ul li a {
@@ -40,10 +58,19 @@ nav ul li a:hover {
 .cart-icon {
     font-size: 24px;
     color: black;
-    margin-left: auto; /* This will push the shopping cart to the right */
+    margin-left: auto;
+    position: relative;
+}
+.cart-link {
+    color: black;
+}
+
+.cart-link:visited {
+    color: black;
 }
 /* End Nav Styles */
 
+/* Form Styles */
 .form-inline {
     display: flex;
     align-items: center;
@@ -73,18 +100,17 @@ nav ul li a:hover {
 .form-submit:hover {
     background-color: #45a049;
 }
+/* End Form Styles */
 
+/* Container Styles */
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two columns */
     grid-gap: 20px;
-    /* Gap between columns */
 }
 
 .contact-form {
     grid-column: 1 / span 1;
-    /* Span 1 column */
 }
 
 .sidebar {
@@ -101,13 +127,9 @@ nav ul li a:hover {
 
 .image-container {
     grid-column: 1 / span 1;
-    /* Span 1 column */
     grid-row: 2 / span 1;
-    /* Span 1 row */
     margin-top: 20px;
-    /* Adjust margin as needed */
     border-radius: 10px;
-        /* Add rounded corners */
 }
 
 .image-container img {
@@ -119,17 +141,13 @@ nav ul li a:hover {
 }
 
 .news-item {
-    background-color: aqua;
-    /* Adjust the font size to make the text smaller */
+    background-color: black;
     font-size: 0.9em;
-
-    /* Adjust the padding and margin to reduce the space around the news items */
     padding: 10px;
     margin: 10px 0;
-
-    /* Adjust the width to make the news items narrower */
     width: 80%;
-    max-width: 80%; /* Adjust as needed */
+    max-width: 80%;
+    color: white;
 }
 
 .news-title {
@@ -139,58 +157,57 @@ nav ul li a:hover {
 .news-date,
 .news-author {
     font-size: 0.8em;
-    color: #000000;
+    color: white;
 }
 
+.image-text-container {
+    display: flex;
+    align-items: center;
+}
 
-  .image-text-container {
-      display: flex;
-      align-items: center;
-  }
+.text {
+    flex: 1;
+    padding: 60px;
+    text-align: right;
+    color: black;
+    background-color: #CCCCCC;
+}
 
-  .text {
-      flex: 1;
-      padding: 20px;
-      text-align: right;
-  }
+.image-container {
+    flex: 1;
+    margin-bottom: 15px;
+}
 
-  .image-container {
-      flex: 1;
-  }
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
 
-  .image-container img {
-      max-width: 100%;
-      height: auto;
-  }
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column;
+    }
 
-  @media (max-width: 768px) {
-      .image-text-container {
-          flex-direction: column;
-      }
+    .text,
+    .image-container {
+        width: 100%;
+        text-align: left;
+    }
+}
 
-      .text,
-      .image-container {
-          width: 100%;
-          text-align: left;
-      }
-  }
-
-
-  .top-img {
+.top-img {
     display: flex; 
     justify-content: center; 
     align-items: flex-end;
-  }
+}
 
-
-  .w-50 {
+.w-50 {
     width: 50px;
 }
 
 .h-50 {
     height: 50px;
 }
-
 
 .w-1000 {
     width: 1000px;
@@ -199,3 +216,103 @@ nav ul li a:hover {
 .h-1000 {
     height: 1000px;
 }
+/* End Container Styles */
+
+/* Start Footer Styles */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #CCCCCC;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+footer img, nav img {
+    border-radius: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+footer ul li a:hover {
+    background-color: #DDD;
+    border-radius: 5px;
+}
+
+.footer-text {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+}
+/* End Footer Styles */
+
+/* Main Container Styles */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-content {
+    flex-grow: 1;
+}
+
+#cart-box {
+    width: 150px;
+    height: 50vh;
+    background-color: #DDD;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#cart-items div {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+/* End Main Container Styles */
