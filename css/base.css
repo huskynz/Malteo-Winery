@@ -346,3 +346,33 @@ footer ul li a:hover {
     grid-gap: 20px;
 }
 /* End Main Container Styles */
+/* For tablets: */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .contact-form {
+        grid-column: 1;
+    }
+}
+
+/* For mobile phones: */
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .contact-form {
+        grid-column: 1;
+    }
+}
+#footer {
+    margin-top: auto;
+}
