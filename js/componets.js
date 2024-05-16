@@ -3,5 +3,9 @@ $(function(){
   });
 
 $(function(){
-    $("#footer").load("/components/footer.html"); 
+    $("#footer").load("/components/footer.html");
+  });
+
+$(function(){
+    $("#header").load("/components/header.html");
   });
