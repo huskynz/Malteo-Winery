@@ -1,0 +1,51 @@
+/* Start Footer Styles */
+footer {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #CCCCCC;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+footer img, nav img {
+    border-radius: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+footer ul li a:hover {
+    background-color: #DDD;
+    border-radius: 5px;
+}
+
+.footer-text {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+}
+#footer {
+    margin-top: auto;
+}
+/* End Footer Styles */
