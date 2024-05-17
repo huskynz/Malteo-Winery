@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/huskynz/Malteo-Winery">
-    <img src="https://serv.malteowinery.xyz/logo/default.png" alt="Logo" width="80" height="80">
+    <img src="https://serv.malteowinery.xyz/logo/defualt.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Malteo Winery</h3>
@@ -12,9 +12,7 @@
 ![Contributors](https://img.shields.io/github/contributors/HuskyNZ/Malteo-Winery?color=dark-green) ![Issues](https://img.shields.io/github/issues/HuskyNZ/Malteo-Winery) ![License](https://img.shields.io/github/license/HuskyNZ/Malteo-Winery)
 
 ## About The Project
-
-This site is built in NextJS and is a site to learn who I am, Sometimes I break things sometimes I dont it depends on the day.
-
+This is a project im working on for a assment im usieng a few HTML componts that get loaded via JS
 ## Built With
 - [Html](#)
 - [css](#)
