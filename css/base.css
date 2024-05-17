@@ -459,3 +459,22 @@ nav {
 .hidden {
     display: none;
 }
+
+/* End Footer Styles */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equally wide columns */
+    gap: 70px; /* Space between the boxes */
+    margin-bottom: 20px; /* Space above the footer */
+    margin-left: 20px; /* Space to the left of the boxes */
+    margin-right: 20px; /* Space to the right of the boxes */
+    color: black;
+}
+
+.info-item {
+    background-color: #CCCCCC; /* Light gray background */
+    padding: 20px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the text */
+}
