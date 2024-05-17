@@ -1,3 +1,7 @@
+@import url(/css/nav.css);
+@import url(/css/footer.css);
+@import url(/css/shop.css);
+
 body, html {
     height: 100%;
     margin: 0;
@@ -9,100 +13,6 @@ body, html {
 body {
     display: flex;
     flex-direction: column;
-}
-nav {
-    flex-shrink: 0; /* This will prevent the nav from shrinking */
-}
-
-.main-container {
-    flex: 1 0 auto; /* This will make the main container stretch to fill the available space */
-}
-.product-item .product-image {
-    transition: transform 0.3s ease-in-out;
-}
-
-.product-item .product-image:hover {
-    transform: scale(1.2);
-}
-.product-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.product-description {
-    margin: 10px 0;
-}
-
-.product-details {
-    align-self: flex-end;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #CCCCCC;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-grow: 1; /* This will make the ul take up all available space */
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-}
-
-nav ul li a:hover {
-    background-color: #DDD;
-    border-radius: 5px;
-}
-
-.cart-icon {
-    margin-left: auto; /* This will push the cart icon to the right */
-    position: relative;
-    color: black; /* Set the color to match your site */
-    text-decoration: none; /* Remove underline from links */
-}
-
-#cart-items {
-    display: none;
-    position: absolute;
-    right: 0;
-    width: 200px;
-    background-color: #DDD; /* Set the background color to match your site */
-    border: 1px solid #000; /* Set the border to match your site */
-    padding: 10px;
-    color: black; /* Set the color to match your site */
-    text-decoration: none; /* Remove underline from links */
-}
-
-.cart-icon:hover #cart-items {
-    display: block;
-}
-
-.cart-link {
-    color: black; /* Set the color to match your site */
-    text-decoration: none; /* Remove underline from links */
-}
-
-.cart-link:visited {
-    color: black; /* Set the color to match your site */
-    text-decoration: none; /* Remove underline from links */
 }
 
 /* Form Styles */
@@ -125,15 +35,15 @@ nav ul li a:hover {
 .form-submit {
     margin-left: 10px;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: black;
+    background-color: black;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .form-submit:hover {
-    background-color: #45a049;
+    background-color: #000000;
 }
 /* End Form Styles */
 
@@ -196,8 +106,10 @@ nav ul li a:hover {
 }
 
 .image-text-container {
-    display: flex;
-    align-items: center;
+    display: flex; /* Use Flexbox */
+    align-items: stretch; /* Make the items as tall as the tallest one */
+    justify-content: space-between; /* Add some space between the items */
+    margin: 20px; /* Add some space around the container */
 }
 
 .text {
@@ -206,16 +118,18 @@ nav ul li a:hover {
     text-align: right;
     color: black;
     background-color: #CCCCCC;
+    border-radius: 10px;
 }
 
 .image-container {
-    flex: 1;
-    margin-bottom: 15px;
+    margin-right: 20px; /* Add some space on the right */
+    margin-bottom: 20px; /* Add some space on the bottom */
 }
 
 .image-container img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
@@ -253,137 +167,8 @@ nav ul li a:hover {
 }
 /* End Container Styles */
 
-/* Start Footer Styles */
-footer {
-    box-sizing: border-box;
-    width: 100%;
-    background-color: #CCCCCC;
-    padding: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 15px;
-    flex-shrink: 0;
-}
-
-footer img, nav img {
-    border-radius: 10px;
-}
-
-footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-footer ul li {
-    margin-left: 20px;
-}
-
-footer ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-}
-
-footer ul li a:hover {
-    background-color: #DDD;
-    border-radius: 5px;
-}
-
-.footer-text {
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: black;
-    font-weight: bold;
-    font-size: 50px;
-}
-/* End Footer Styles */
-
-/* Main Container Styles */
-.main-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
 
 
-#cart-box {
-    width: 200px;
-    height: 70vh;
-    background-color: #DDD;
-    padding: 20px;
-    padding-top: 30px;
-    overflow-y: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-#cart-items div {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-    display: flex; /* Make the cart items display in a row */
-    justify-content: space-between; /* Space the items evenly */
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cart-icon {
-    position: relative;
-}
-
-#cart-items {
-    display: none;
-    position: absolute;
-    right: 0;
-    width: 200px;
-    background-color: #fff;
-    border: 1px solid #000;
-    padding: 10px;
-}
-
-.cart-icon:hover #cart-items {
-    display: block;
-}
-
-#cart-items div img {
-    width: 50px; /* Make the product images smaller */
-    height: auto;
-    margin-right: 10px; /* Add some space between the image and the text */
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    padding: 5px;
-}
-
-.product-item {
-    border: 1px solid #000000;
-    padding: 20px;
-    text-align: center;
-    background-color: #ccc;
-}
-
-.product-item img {
-    width: 100%;
-    height: auto;
-}
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 20px;
-}
 /* End Main Container Styles */
 /* For tablets: */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -441,24 +226,7 @@ nav {
         width: 100%; /* Make the remove button take up the full width of the cart item */
     }
 }
-#footer {
-    margin-top: auto;
-}
 
-.total-items {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 14px;
-}
-
-.hidden {
-    display: none;
-}
 
 /* End Footer Styles */
 
