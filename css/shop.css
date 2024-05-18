@@ -3,6 +3,14 @@
 }
 .product-item .product-image {
     transition: transform 0.3s ease-in-out;
+    
+}
+.product-item .product-image {
+    width: 100%;
+    max-width: 100px !important; /* Adjust this value to your preference */
+    height: auto;
+    margin: 0 auto; /* This will center the image */
+    
 }
 
 .product-item .product-image:hover {
@@ -12,6 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: black;
+
 }
 
 .product-description {
@@ -95,9 +105,34 @@
 .product-item img {
     width: 100%;
     height: auto;
+    
 }
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
+}
+.product-image {
+    width: 100%; /* This will make the image take the full width of its container */
+    max-width: 300px; /* This will limit the maximum width of the image */
+    height: auto; /* This will maintain the aspect ratio of the image */
+}
+
+.add-to-cart {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #555; /* Darker shade when mouse hovers over the button */
 }
