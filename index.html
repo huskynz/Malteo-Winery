@@ -2,31 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 
+<!-- Head section of the document -->
 <head id="header">
-    <!--Link to jqurey and our components.js for our footer and nav bar to load the rest of the header contnet is also loaded-->
+    <!-- Importing jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Importing componets.js a JavaScript file that handles the nav and footer aswell as the rest of the Header content -->
     <script src="./js/componets.js"> </script>
-
 </head>
 
+<!-- Body section of the document -->
 <body>
+    <!-- Navigation bar placeholder, content will be loaded by JavaScript -->
     <div id="navbar"></div>
 
     <!-- Main content container -->
     <div class="container">
-        <!-- Contact form -->
+        <!-- Contact form for newsletter sign up -->
         <div class="contact-form">
             <h2>Sign up for our news letter</h2>
+            <!-- Form action is set to send an email -->
             <form action="mailto:peter@husky.nz" method="post" enctype="text/plain" class="form-inline">
+                <!-- Input field for name -->
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" id="name" name="name" required class="form-input">
+                <!-- Input field for email -->
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" id="email" name="email" required class="form-input">
+                <!-- Submit button for the form -->
                 <input type="submit" value="Submit" class="form-submit">
             </form>
         </div>
-        <!-- Image next to the local events and news aside -->
+        <!-- Container for the image -->
         <div class="image-container">
+            <!-- Image element with source and alt text -->
             <img src="https://serv.malteowinery.xyz/img/mainsite/grapevine1.jpg" alt="Image Description" class="w-1000 h-1000">
         </div>
         
@@ -34,90 +42,18 @@
         <aside class="sidebar">
             <h2>Local Events and Latest News</h2>
             
-            <!-- Sidebar for news items -->
-<aside class="sidebar">
-    <h2>Local Events and Latest News</h2>
-    
-    <!-- News items -->
-    <div class="news-item">
-        <h3 class="news-title">Website Launch</h3>
-        <p class="news-date">Date: 2022-01-01</p>
-        <p class="news-author">Author: Malteo Winery</p>
-        <p class="news-description">We are excited to announce the launch of our new website! Explore our site to learn more about our wines, upcoming events, and more.</p>
+            <!-- News items -->
+            <div class="news-item">
+                <!-- Title of the news item -->
+                <h3 class="news-title">Website Launch</h3>
+                <!-- Date of the news item -->
+                <p class="news-date">Date: 2022-01-01</p>
+                <!-- Author of the news item -->
+                <p class="news-author">Author: Malteo Winery</p>
+                <!-- Description of the news item -->
+                <p class="news-description">We are excited to announce the launch of our new website! Explore our site to learn more about our wines, upcoming events, and more.</p>
+            </div>
+        </aside>
     </div>
-
-    <div class="news-item">
-        <h3 class="news-title">Wine Tasting Event</h3>
-        <p class="news-date">Date: 2022-02-01</p>
-        <p class="news-author">Author: Malteo Winery</p>
-        <p class="news-description">Join us for a wine tasting event on February 1, 2022. Sample our award-winning wines and learn more about our winemaking process.</p>
-    </div>
-
-    <div class="news-item">
-        <h3 class="news-title">New Wine Release</h3>
-        <p class="news-date">Date: 2022-03-01</p>
-        <p class="news-author">Author: Malteo Winery</p>
-        <p class="news-description">We're thrilled to announce the release of our latest wine. Come and try it out!</p>
-    </div>
-
-    <div class="news-item">
-        <h3 class="news-title">Vineyard Tour</h3>
-        <p class="news-date">Date: 2022-04-01</p>
-        <p class="news-author">Author: Malteo Winery</p>
-        <p class="news-description">Join us for a tour of our vineyard. Learn about our grape varieties and how we make our wines.</p>
-    </div>
-
-    <div class="news-item">
-        <h3 class="news-title">Winery Anniversary Celebration</h3>
-        <p class="news-date">Date: 2022-05-01</p>
-        <p class="news-author">Author: Malteo Winery</p>
-        <p class="news-description">Join us as we celebrate our winery's anniversary with a special event. We'll have wine tastings, food pairings, and more!</p>
-    </div>
-</aside>
-    </div>
-
-    <!-- Image and text container -->
-    <div class="image-text-container">
-        <!-- Text content -->
-        <div class="text">
-            <h2>Weddings</h2>
-            <p>Offering an elegant wedding experience in lovingly restored classic surroundings, with magnificent views and complimented with world class cuisine and wines. Mission provides the complete wedding service all in the one convenient and stunning locatio</p>
-        </div>
-        <!-- Image content -->
-        <div class="image-container">
-            <img src="https://serv.malteowinery.xyz/img/mainsite/weddingvenue.jpg" alt="Image Description">
-        </div>
-    </div>
-
-    <!-- Another image and text container -->
-    <div class="image-text-container">
-        <!-- Image content -->
-        <div class="image-container">
-            <img src="https://serv.malteowinery.xyz/img/mainsite/shop.jpg" alt="Image Description">
-        </div>
-        <!-- Text content -->
-        <div class="text">
-            <h2>Wine Tasting</h2>
-            <p>Malteo Winery is a specialist wine store where you can taste award winning, single vineyard and reserve wines from across New Zealand, including from boutique wineries that don't have cellar doors.</p>
-        </div>
-    </div>
-<!-- Opening Times and Location -->
-<div class="info-grid">
-    <div class="info-item">
-        <h2>When are we open?</h2>
-        <p>Monday - Friday: 11:30-2:30pm</p>
-        <p>Saturday and Sunday: 11:30-4:00pm</p>
-        <p>We offer wine tasting during this time</p>
-    </div>
-
-    <div class="info-item">
-        <h2>Where are we?</h2>
-        <p>We are located on </p>
-        <p>36 Main North Road, Blenheim</p>
-    </div>
-</div>
-
-    
-<div id="footer"></div>
 </body>
 </html>
