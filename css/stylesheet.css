@@ -569,19 +569,29 @@ footer ul li a:hover {
     margin-bottom: 10px; /* Add space between items */
 }
 
-.post-button {
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make items stretch to fill the container */
+}
+
+.post-button, .news-link {
+    display: flex;
+    flex: 1 1 auto; /* Grow and shrink equally, base size is auto */
+    text-decoration: none;
+    color: inherit;
     background-color: #000000;
-    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none; /* Remove underline */
-    padding: 20px;
     transition: background-color 0.3s ease;
     color: white;
-    margin: 10px;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-.post-button:hover {
+.post-button:hover, .news-link:hover {
     background-color: #555; /* Darker shade when mouse hovers over the button */
+    text-decoration: none;
 }
