@@ -2,31 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 
+<!-- Head section of the document -->
 <head id="header">
-    <!--Link to jqurey and our components.js for our footer and nav bar to load the rest of the header contnet is also loaded-->
+    <!-- Importing jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Importing componets.js a JavaScript file that handles the nav and footer aswell as the rest of the Header content -->
     <script src="./js/componets.js"> </script>
-
 </head>
 
+<!-- Body section of the document -->
 <body>
+    <!-- Navigation bar placeholder, content will be loaded by JavaScript -->
     <div id="navbar"></div>
 
     <!-- Main content container -->
     <div class="container">
-        <!-- Contact form -->
+        <!-- Contact form for newsletter sign up -->
         <div class="contact-form">
             <h2>Sign up for our news letter</h2>
+            <!-- Form action is set to send an email -->
             <form action="mailto:peter@husky.nz" method="post" enctype="text/plain" class="form-inline">
+                <!-- Input field for name -->
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" id="name" name="name" required class="form-input">
+                <!-- Input field for email -->
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" id="email" name="email" required class="form-input">
+                <!-- Submit button for the form -->
                 <input type="submit" value="Submit" class="form-submit">
             </form>
         </div>
-        <!-- Image next to the local events and news aside -->
+        <!-- Container for the image -->
         <div class="image-container">
+            <!-- Image element with source and alt text -->
             <img src="https://serv.malteowinery.xyz/img/mainsite/grapevine1.jpg" alt="Image Description" class="w-1000 h-1000">
         </div>
         
