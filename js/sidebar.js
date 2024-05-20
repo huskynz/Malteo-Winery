@@ -9,8 +9,8 @@ fetch('/json/news.json')
             sidebarItem.classList.add('sidebar-item','news-link');
             sidebarItem.innerHTML = `
                 <h3 class="sidebar-title">${item.title}</h3>
-                <p class="sidebar-date">Date: ${item.date}</p>
-                <p class="sidebar-author">Author: ${item.author}</p>
+                <p class="sidebar-date">${item.date}</p>
+                <p class="sidebar-author">${item.author}</p>
                 <p class="sidebar-description">${item.description}</p>
             `;
             sidebarContainer.appendChild(sidebarItem);

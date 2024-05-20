@@ -575,6 +575,25 @@ footer ul li a:hover {
     align-items: stretch; /* Make items stretch to fill the container */
 }
 
+/* Add this to your CSS file */
+
+.sidebar-item {
+    display: block;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.sidebar-date, .sidebar-author, .sidebar-description {
+    margin-bottom: 5px;
+}
+
 .post-button, .news-link {
     display: flex;
     flex: 1 1 auto; /* Grow and shrink equally, base size is auto */
@@ -595,3 +614,4 @@ footer ul li a:hover {
     background-color: #555; /* Darker shade when mouse hovers over the button */
     text-decoration: none;
 }
+
