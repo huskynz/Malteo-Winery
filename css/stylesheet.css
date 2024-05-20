@@ -559,3 +559,29 @@ footer ul li a:hover {
     cursor: pointer;
     text-decoration: none; /* Add this line */
 }
+
+.styled-list {
+    list-style-type: none; /* Remove bullet points */
+    background: #CCCCCC;
+}
+
+.styled-list li {
+    margin-bottom: 10px; /* Add space between items */
+}
+
+.post-button {
+    background-color: #000000;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline */
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    color: white;
+    margin: 10px;
+}
+
+.post-button:hover {
+    background-color: #555; /* Darker shade when mouse hovers over the button */
+}
