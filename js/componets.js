@@ -10,5 +10,9 @@ $(function(){
     $("#header").load("/components/header.html");
   });
 
+$(function(){
+    $("#index-content").load("/components/index-content.html");
+  });
+
 
 
