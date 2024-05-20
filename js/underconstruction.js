@@ -6,11 +6,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     var params = new URLSearchParams(window.location.search);
-    var home = params.get('buttonclick') || 'Click the "Home" button in the nav to return to the home page';
-    if (home == 'true') {
-        $('#gohomemessage').text(`Click the Home button in the nav to return to the home page`);
-    }
-    else { $('#gohomemessage').text('Please enter a vaild ?buttonclick message it should be true anything else and it will result in this message'); }
+    var backButton = params.get('backbutton') || 'Home';
+    var buttonLink = `${backButton}`;
+
+    // Create a new anchor element, set its href attribute and text, add the 'form-submit' class, and add it to the #button-back element
+    $('#button-back').append($('<a>').attr('href', buttonLink).addClass('back-button').text('Go Back'));
 });
-
-
