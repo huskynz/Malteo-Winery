@@ -3,23 +3,34 @@
     <img src="https://serv.malteowinery.xyz/logo/defualt.png" alt="Company Logo" class="w-50 h-50">
 
     <!-- Navigation links -->
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/pages/gallery.html">Gallery</a></li>
+        <li><a href="/pages/underconstruction.html?page=Gallery&backbutton=/">Gallery</a></li>
         <li><a href="/pages/store.html">Shop</a></li>
         <li><a href="/pages/news.html">News</a></li>
-        <li><a href="/pages/underconstruction.html?page=Tour&backbutton=/">Tours</a></li>
     </ul>
 
     <!-- Shopping cart icon and dropdown -->
-<div class="cart-icon">
-    <a href="/pages/store.html" class="cart-link">
-        <i class="fas fa-shopping-cart"></i>
-    </a>
-    <!-- Cart summary will be inserted here -->
-    <div id="cart-summary"></div>
-    <!-- Cart items will be inserted here -->
-    <div id="cart-message"></div>
-    <div id="cart-items"></div>
+    <div class="cart-icon">
+        <a href="/pages/store.html" class="cart-link">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <!-- Cart summary will be inserted here -->
+        <div id="cart-summary"></div>
+        <!-- Cart items will be inserted here -->
+        <div id="cart-message"></div>
+        <div id="cart-items"></div>
+    </div>
+
+<div id="mobile-nav" class="mobile-nav">
+    <a href="javascript:void(0)" class="closebtn" id="closebtn">&times;</a>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/underconstruction.html?page=Gallery&backbutton=/">Gallery</a></li>
+        <li><a href="/pages/store.html">Shop</a></li>
+        <li><a href="/pages/news.html">News</a></li>
+    </ul>
 </div>
+
+<button id="nav-toggle" class="nav-toggle">Menu</button>
 </nav>
