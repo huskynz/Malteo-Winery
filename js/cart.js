@@ -37,6 +37,9 @@ function addCartItemToCartBox(item) {
 
     newItemDiv.appendChild(removeButton);
     cartItemsDiv.appendChild(newItemDiv);
+
+    // Update the cart summary
+    updateCartSummary();
 }
 
 // Function to update cart summary
@@ -50,7 +53,7 @@ function updateCartSummary() {
             console.error(`Invalid item string: ${item}`);
             return total;
         }
-        var price = parseFloat(parts[1].replace('$', ''));
+        var price = parseFloat(parts[1]);
         if (isNaN(price)) {
             console.error(`Invalid price: ${parts[1]}`);
             return total;
@@ -60,36 +63,32 @@ function updateCartSummary() {
     cartSummaryDiv.textContent = `Total Items: ${totalItems}, Total Price: $${totalPrice.toFixed(2)}`;
 }
 
-// Update the cart box with the loaded cart items
-if (cartItems.length === 0) {
-    messageDiv.classList.remove('hidden');
-} else {
-    messageDiv.classList.add('hidden');
-    cartItems.forEach(addCartItemToCartBox);
-    updateCartSummary();
+function updateCartSummary() {
+    fetch('/json/shop.json')
+        .then(response => response.json())
+        .then(data => {
+            var totalItems = cartItems.length;
+            var totalPrice = cartItems.reduce(function(total, item) {
+                var parts = item.split(' - ');
+                if (parts.length < 2) {
+                    console.error(`Invalid item string: ${item}`);
+                    return total;
+                }
+                // Find the item in the data array
+                var itemData = data.find(d => d.name === parts[0]);
+                if (!itemData) {
+                    console.error(`Item not found in data: ${parts[0]}`);
+                    return total;
+                }
+                // Use the price from the data array
+                var price = parseFloat(itemData.price);
+                if (isNaN(price)) {
+                    console.error(`Invalid price: ${itemData.price}`);
+                    return total;
+                }
+                return total + price;
+            }, 0);
+            cartSummaryDiv.textContent = `Total Items: ${totalItems}, Total Price: $${totalPrice.toFixed(2)}`;
+        })
+        .catch(error => console.error('Error:', error));
 }
-
-var buttons = document.querySelectorAll('.product-item button');
-buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        // Get the product name and price
-        var productName = button.parentElement.querySelector('.product-name').textContent;
-        var productPrice = button.parentElement.querySelector('.product-price').textContent.replace('$', '');
-
-        // Add the new item to the cart items array
-        var newItem = `${productName} - ${productPrice}`;
-        cartItems.push(newItem);
-
-        // Update the cart items in the local storage
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-        // Add the new item to the cart box
-        addCartItemToCartBox(newItem);
-
-        // Update the cart summary
-        updateCartSummary();
-
-        // Hide the 'No items in the cart' message
-        messageDiv.classList.add('hidden');
-    });
-});

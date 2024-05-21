@@ -227,8 +227,70 @@ body {
     .remove-button {
         width: 100%; /* Make the remove button take up the full width of the cart item */
     }
+    .nav-links {
+        display: block;
+    }
+    .nav-toggle {
+        display: none;
+    }
 }
 
+/* Hide mobile nav and its toggle button on screens wider than 768px */
+@media screen and (min-width: 769px) {
+    .mobile-nav, .nav-toggle {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.mobile-nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav ul li a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-size: 36px; /* Increase font size */
+    padding: 10px; /* Add some padding */
+}
+
+.mobile-nav ul li a:hover {
+    color: #f1f1f1;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    margin: 10px;
+}
 
 /* End Footer Styles */
 
@@ -613,5 +675,13 @@ footer ul li a:hover {
 .post-button:hover, .news-link:hover {
     background-color: #555; /* Darker shade when mouse hovers over the button */
     text-decoration: none;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates exactly 2 columns */
+
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    width: 100%;
 }
 
