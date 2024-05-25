@@ -7,11 +7,12 @@
     <!-- Importing jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Importing componets.js a JavaScript file that handles the nav and footer aswell as the rest of the Header content -->
-    <script src="./js/componets.js"> </script>
+    <script src="/js/componets.js" onerror="document.getElementById('error-message').textContent = 'Failed to load script'"></script>
 </head>
 
 <!-- Body section of the document -->
 <body>
+    <p id="error-message"></p>
     <!--This is our nav bar-->
     <div id="navbar"></div>
     <!-- This calles out index-content.html for our main content-->
