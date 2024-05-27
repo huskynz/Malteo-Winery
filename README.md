@@ -13,6 +13,10 @@
 
 ## About The Project
 This is a project im working on for a assment im usieng a few HTML componts that get loaded via JS
+
+
+To open this site on windows you just need to run opensite.bat
+This will start a local http server that to can access in your browser at 127.0.0.1
 ## Built With
 - [Html](#)
 - [css](#)
