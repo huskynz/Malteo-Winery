@@ -26,7 +26,7 @@ fetch('/json/news.json')
             }
         } else {
             const listElement = document.createElement('ul');
-            listElement.classList.add('styled-list'); // Add this line
+            listElement.classList.add('styled-list');
             posts.forEach(post => {
             const listItem = document.createElement('li');
             const button = document.createElement('button');
@@ -34,7 +34,7 @@ fetch('/json/news.json')
                  window.location.href = `/pages/news.html?postid=${post.postid}`;
              };
             button.textContent = post.title;
-            button.classList.add('post-button'); // Add this line
+            button.classList.add('post-button');
             listItem.appendChild(button);
             listElement.appendChild(listItem);
         });
