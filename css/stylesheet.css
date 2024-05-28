@@ -406,7 +406,6 @@ display: flex; /* Make the cart items display in a row */
 
 .close {
   color: #aaaaaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
 }
